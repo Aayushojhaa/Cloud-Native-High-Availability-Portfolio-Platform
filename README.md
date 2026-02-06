@@ -1,0 +1,2 @@
+# Cloud-Native-High-Availability-Portfolio-Platform
+Cloud-Native High Availability &amp; Disaster Recovery web platform built on AWS. The project demonstrates multi-region architecture using EC2, ALB, Auto Scaling, Route 53 health checks, and database replication. It ensures fault tolerance, minimal downtime, and reliable failover during outages, following real-world enterprise HA/DR best practices.
