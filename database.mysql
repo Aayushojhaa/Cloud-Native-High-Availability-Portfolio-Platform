@@ -1,0 +1,17 @@
+mysql -h <RDS-ENDPOINT> -u admin -p
+
+CREATE DATABASE  portfolio_db;
+USE portfolio_db;
+
+CREATE TABLE  contacts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO contacts (name, email, phone, message)
+VALUES ('Aayush Ojha', 'aayush@test.com', '9876543210', 'This is a test entry from MySQL');
