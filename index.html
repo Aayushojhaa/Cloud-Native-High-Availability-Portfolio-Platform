@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Aayush Ojha | Cloud & DevOps Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:#f5f7fb;
+  color:#333;
+  line-height:1.6;
+}
+
+/* ---------- NAVBAR ---------- */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#0b1c39;
+  padding:15px 40px;
+  z-index:1000;
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav ul li{
+  color:#fff;
+  margin:0 15px;
+  cursor:pointer;
+}
+nav ul li:hover{color:#00bfff}
+
+/* ---------- HERO ---------- */
+header{
+  height:100vh;
+  background:linear-gradient(135deg,#0b1c39,#0047ff);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+}
+header h1{font-size:52px;margin-bottom:20px}
+header p{font-size:20px;max-width:700px;margin:auto}
+
+/* ---------- SECTIONS ---------- */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 30px;
+}
+section h2{
+  font-size:36px;
+  margin-bottom:20px;
+  color:#0047ff;
+}
+section p{max-width:900px}
+
+/* ---------- SKILLS ---------- */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+.skill-card{
+  background:#fff;
+  padding:25px;
+  border-radius:8px;
+  box-shadow:0 0 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.skill-card:hover{transform:translateY(-5px)}
+
+/* ---------- PROJECTS ---------- */
+.project{
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  margin-bottom:30px;
+  box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+.project h3{margin-bottom:10px}
+
+/* ---------- CONTACT ---------- */
+.contact-box{
+  background:#fff;
+  padding:40px;
+  border-radius:10px;
+  box-shadow:0 0 25px rgba(0,0,0,0.15);
+}
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin:12px 0;
+  border:1px solid #ccc;
+  border-radius:5px;
+  font-size:16px;
+}
+button{
+  width:100%;
+  padding:15px;
+  background:#0047ff;
+  color:#fff;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+}
+button:hover{background:#002fbf}
+#response{margin-top:15px;font-weight:bold}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:#0b1c39;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:80px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:768px){
+  header h1{font-size:38px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><strong>Aayush Ojha</strong></li>
+    <li onclick="scrollToId('about')">About</li>
+    <li onclick="scrollToId('skills')">Skills</li>
+    <li onclick="scrollToId('projects')">Projects</li>
+    <li onclick="scrollToId('contact')">Contact</li>
+  </ul>
+</nav>
+
+<header>
+  <div>
+    <h1>Cloud & DevOps Engineer</h1>
+    <p>
+      Designing enterprise-grade, scalable and highly available cloud architectures
+      on AWS with real-world production experience.
+    </p>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Cloud Engineer with strong hands-on experience in AWS infrastructure,
+    high availability systems, disaster recovery, and performance-optimized
+    cloud platforms. I specialize in designing architectures that are secure,
+    scalable, cost-efficient, and production-ready.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">AWS EC2 & Auto Scaling</div>
+    <div class="skill-card">VPC & Networking</div>
+    <div class="skill-card">Application Load Balancer</div>
+    <div class="skill-card">Amazon RDS (MySQL)</div>
+    <div class="skill-card">Redis (ElastiCache)</div>
+    <div class="skill-card">CloudFront & Route 53</div>
+    <div class="skill-card">Linux & Bash</div>
+    <div class="skill-card">High Availability & DR</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Cloud-Native High Availability Portfolio Platform</h3>
+    <p>
+      Designed a multi-region AWS architecture using VPC, ALB, Auto Scaling,
+      RDS, Redis, CloudFront, and Route 53 with automated failover.
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>Serverless Event-Driven Application Platform</h3>
+    <p>
+      Built a serverless backend using AWS Lambda, API Gateway, DynamoDB,
+      and IAM for secure and scalable API-based systems.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <div class="contact-box">
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="response"></div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Aayush Ojha | Cloud Engineer Portfolio
+</footer>
+
+<script>
+function scrollToId(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const data=new FormData(this);
+
+  fetch("save.php",{method:"POST",body:data})
+  .then(r=>r.text())
+  .then(res=>{
+    document.getElementById("response").innerText=res;
+    this.reset();
+  })
+  .catch(()=>{
+    document.getElementById("response").innerText="Error sending message";
+  });
+});
+</script>
+
+</body>
+</html>
